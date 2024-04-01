@@ -1,0 +1,91 @@
+@import 'general.css';
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: black;
+  padding: 5px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header span:hover,
+.left-sec>*:hover{
+  color: var(--hover);
+}
+.left-sec>*,
+.middle-sec>span{
+  color: white;
+  cursor: pointer;
+  color: white;
+}
+.left-sec,
+.right-sec,
+.middle-sec{
+  flex: 1fr;
+}
+
+.left-sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+.left-sec>*,
+.middle-sec>*{
+  font-size: 31px;
+}
+.left-sec>div{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* .left-sec>div:hover{
+  border-top-width: 4px;
+  border-top-color: var(--hover);
+  border-top-style: solid;
+  #another way for border top style
+} */
+.left-sec>div::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  color: var(--hover);
+  top: -10px;
+  right: 0;
+  border: solid;
+  border-width: 1.5px;
+  visibility: hidden;
+}
+.left-sec>div:hover::before{
+  visibility: visible;
+}
+
+
+.middle-sec{
+  margin-left: -7%;
+  width: auto;
+}
+.middle-sec span{
+  font-weight: 400;
+  font-size: 40px;
+}
+
+
+.right-sec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+
+}
+.icon{
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}

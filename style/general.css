@@ -1,0 +1,15 @@
+:root{
+  --hover: #dcaa2e;
+}
+*{
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  padding-top: 90px;
+
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  background-color: darkgray;
+}
