@@ -38,6 +38,7 @@
   align-items: center;
   column-gap: 20px;
   flex-shrink: none;
+  min-width: 200px;
 }
 .left-sec *,
 .middle-sec *{

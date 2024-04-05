@@ -9,9 +9,11 @@ a{
   padding: 0;
   margin: 0;
 }
-
+button{
+  cursor: pointer;
+}
 body{
-  padding-top: 90px;
+  padding-top: 110px;
 
   font-family:  Arial, Helvetica, sans-serif;
   background-color: rgb(69, 69, 69);
