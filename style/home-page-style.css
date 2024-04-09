@@ -1,5 +1,8 @@
 @import 'general.css';
 
+main{
+  padding: 0;
+}
 .kbd-pic-container{
   width: 100%;
   height: 40rem;

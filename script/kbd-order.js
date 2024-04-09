@@ -9,6 +9,7 @@ if (!localStorage.getItem('orderList')) {
 
 
 const order = {
+  name: 'Custom Board',
   case: ['cherry case', 34],
   pcb: ['rgb pcb', 25],
   switch: ['black linear switches', 16],
