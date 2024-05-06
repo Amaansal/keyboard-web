@@ -1,0 +1,49 @@
+@import 'general.css';
+
+main{
+  padding: 0;
+}
+.kbd-pic-container{
+  width: 100%;
+  height: 40rem;
+  background-image:url(../image/kbd-pic.jpg);
+  background-repeat: repeat;
+  background-position: 0 20%;
+  background-attachment: scroll;
+  background-size:cover;
+  background-clip: content-box;
+}
+
+.main-btn-sec{
+  margin-top: 150px;
+  margin: 150px 100px;
+  display: flex;
+  column-gap: 200px;
+
+  justify-content: center;
+  align-items: center;
+}
+.main-btn{
+  flex: 1fr;
+  padding: 30px;
+  display: block;
+  width: 500px;
+  height: 300px;
+  min-width: 400px;
+  background-color: rgb(88, 88, 88);
+  color: white;
+  border: solid 4px rgb(253, 251, 235);
+  transition: all 0.3s ease;
+}
+.main-btn:hover{
+  border-color: var(--hover);
+  color: var(--hover);
+}
+.main-btn h1{
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+.main-btn div{
+  font-size: 20px;
+}
+
