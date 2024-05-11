@@ -7,88 +7,93 @@ var selectedElem = false;
 
 
 
+const innerProductChanger  = function(size) {
+  const caseDisplay = document.getElementById('case-display');
+  const innerProdGridCase = caseDisplay.querySelectorAll('.inner-product-grid');
+  const PCBDisplay = document.getElementById('pcb-display');
+  const innerProdGridPCB = PCBDisplay.querySelectorAll('.inner-product-grid');
+
+  innerProdGridPCB.forEach(function(element) {
+    if (element.id.split('-')[1] == size){
+      element.classList.remove("hidden");
+      // if the id = the size param, then its the desired conatiner, so remove hidden class
+    } else {
+      element.classList.add("hidden");
+    }
+  });
+
+  innerProdGridCase.forEach(function(element) {
+    if (element.id.split('-')[1] == size){
+      element.classList.remove("hidden");
+      // if the id = the size param, then its the desired conatiner, so remove hidden class
+    } else {
+      element.classList.add("hidden");
+    }
+  });
+
+
+}
+
 
 const kbdSizeDisplayer = function (size) {
   const caseDisplay = document.getElementById('case-display');
-  const innerProdGrid = caseDisplay.querySelectorAll('.inner-product-grid');
+  const innerProdGridCase = caseDisplay.querySelectorAll('.inner-product-grid');
+  const PCBDisplay = document.getElementById('pcb-display');
+  const innerProdGridPCB = PCBDisplay.querySelectorAll('.inner-product-grid');
+  const switchDisplay = document.getElementById('switch-display');
 
   if(size ==0) {
     caseDisplay.classList.add('hidden');
+    PCBDisplay.classList.add('hidden');
+    switchDisplay.classList.add('hidden');
 
 
   }if (size == 75) {
     caseDisplay.classList.remove('hidden');
+    switchDisplay.classList.remove('hidden');
+    PCBDisplay.classList.remove('hidden');
     // remove the hidden class from the overall display
-
-    innerProdGrid.forEach(function(element) {
-      if (element.id.split('-')[1] == size){
-        element.classList.remove("hidden");
-        // if the id = the size param, then its the desired conatiner, so remove hidden class
-      } else {
-        element.classList.add("hidden");
-      }
-    });
+    innerProductChanger(size);
 
 
   } if(size== 60) {
-    caseDisplay.classList.remove('hidden');
 
-    innerProdGrid.forEach(function(element) {
-      if (element.id.split('-')[1] == size){
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
-    });
+    caseDisplay.classList.remove('hidden');
+    switchDisplay.classList.remove('hidden');
+    PCBDisplay.classList.remove('hidden');
+
+    innerProductChanger(size);
 
 
   } if (size ==65) {
     caseDisplay.classList.remove('hidden');
+    switchDisplay.classList.remove('hidden');
+    PCBDisplay.classList.remove('hidden');
 
-    innerProdGrid.forEach(function(element) {
-      if (element.id.split('-')[1] == size){
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
-    });
-
+    innerProductChanger(size);
 
   } if (size == 70) {
     caseDisplay.classList.remove('hidden');
+    switchDisplay.classList.remove('hidden');
+    PCBDisplay.classList.remove('hidden');
 
-    innerProdGrid.forEach(function(element) {
-      if (element.id.split('-')[1] == size){
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
-    });
+    innerProductChanger(size);
 
 
   } if (size == 'TKL') {
     caseDisplay.classList.remove('hidden');
+    switchDisplay.classList.remove('hidden');
+    PCBDisplay.classList.remove('hidden');
 
-    innerProdGrid.forEach(function(element) {
-      if (element.id.split('-')[1] == size){
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
-    });
+    innerProductChanger(size);
 
 
   } if (size == 100) {
     caseDisplay.classList.remove('hidden');
+    switchDisplay.classList.remove('hidden');
+    PCBDisplay.classList.remove('hidden');
 
-    innerProdGrid.forEach(function(element) {
-      if (element.id.split('-')[1] == size){
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
-    });
-
+    innerProductChanger(size);
 
   }
 };
